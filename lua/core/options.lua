@@ -25,6 +25,7 @@ opt.hlsearch = true
 opt.incsearch = true
 
 -- 外观
+opt.guifont = "Cascadia Mono:h14"
 opt.termguicolors = true -- 真彩色
 opt.signcolumn = "yes"   -- 始终显示符号列（诊断/Gitsigns）
 opt.colorcolumn = "80"   -- 参考线

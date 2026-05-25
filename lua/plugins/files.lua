@@ -6,9 +6,21 @@ if not ok then
   return
 end
 
--- 使用 nvim-tree 的所有默认设置，只添加启动快捷键
-nvim_tree.setup({})
+-- nvim-tree 设置
+nvim_tree.setup({
+  view = {
+    -- 其他视图选项可以保持默认
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true, -- 打开文件后自动关闭文件树
+      -- resize_window = true,  -- 可选：调整窗口大小
+      -- window_picker = {      -- 可选：选择打开文件的窗口
+      --   enable = true,
+      -- }
+    }
+  }
+})
 
 -- 全局按键
 vim.keymap.set("n", "<leader>uf", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file tree" })
-vim.keymap.set("n", "<leader>uF", "<cmd>NvimTreeFindFile<CR>", { desc = "Toggle file tree (find current file)" })
